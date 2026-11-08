@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.875" name="arnoco">
+  <DataContextMoniker Name="/arnocoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8d4630b8-edc9-4729-a9c4-1144c351af81" absoluteBounds="1.25, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/arnocoDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66192679-0e1d-4892-93e5-afc79d1baed4" absoluteBounds="1.2650000000000001, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="919b5bbf-8c9e-4626-99b0-f8b7292b36cf" absoluteBounds="2.25, 3.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/arnocoDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f7bdebb5-2e1f-4f0a-9db3-b5bcef94a56c" absoluteBounds="2.265, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e76e1c0-7fd6-4836-92c1-74866ecd11f7" absoluteBounds="3.625, 6.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/arnocoDataContext/InventoryLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84a4086e-b334-4ab8-825c-2bad2a8f9ab0" absoluteBounds="3.64, 7.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d32a7287-01ec-4e46-8a22-d8c0f1b5e5a4" absoluteBounds="0.625, 5.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/arnocoDataContext/OrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3fa7cae-baa8-42db-9eb5-a90ac4437ba4" absoluteBounds="0.64, 6.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3fae78ea-2ef9-40b2-ac64-06b0e5fb9f71" absoluteBounds="4.875, 2, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/arnocoDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af1579f9-2ab3-4a22-987c-5fc04292d04e" absoluteBounds="4.89, 2.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.875 : 5.23000325520833); (0.90625 : 5.23000325520833); (0.90625 : 5.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Order/Order_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="3fae78ea-2ef9-40b2-ac64-06b0e5fb9f71" />
+        <classShapeMoniker Id="d32a7287-01ec-4e46-8a22-d8c0f1b5e5a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.25 : 4.48000325520833); (4.875 : 4.48000325520833)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Customer/Customer_Order" />
+      <nodes>
+        <classShapeMoniker Id="919b5bbf-8c9e-4626-99b0-f8b7292b36cf" />
+        <classShapeMoniker Id="3fae78ea-2ef9-40b2-ac64-06b0e5fb9f71" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="932a651d-69ca-4318-adb2-39217c2d3f7d" absoluteBounds="8.625, 0.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/arnocoDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb087450-876f-4c23-bef8-f82d8fe52836" absoluteBounds="8.64, 1.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.625 : 4.18430826822917); (9.625 : 7.60659912109375); (5.625 : 7.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Product/Product_InventoryLog" />
+      <nodes>
+        <classShapeMoniker Id="932a651d-69ca-4318-adb2-39217c2d3f7d" />
+        <classShapeMoniker Id="1e76e1c0-7fd6-4836-92c1-74866ecd11f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.0937475 : 4.18430826822917); (9.0937475 : 6.09375); (2.625 : 6.09375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Product/Product_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="932a651d-69ca-4318-adb2-39217c2d3f7d" />
+        <classShapeMoniker Id="d32a7287-01ec-4e46-8a22-d8c0f1b5e5a4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.25 : 1.46875); (8.625 : 1.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Category/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="8d4630b8-edc9-4729-a9c4-1144c351af81" />
+        <classShapeMoniker Id="932a651d-69ca-4318-adb2-39217c2d3f7d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="50bd3550-bf2f-40df-bde0-d8ca9f903274" absoluteBounds="5.875, 9.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/arnocoDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8289e027-e444-4b5c-82ae-73051f130024" absoluteBounds="5.89, 10.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="954d0c09-75e0-45ba-91ca-c568c1d4eb7f" absoluteBounds="9.75, 9.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/arnocoDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd2ee5d8-a7f2-4960-882f-930ce704ef14" absoluteBounds="9.765, 9.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(9.75 : 9.40625); (4.625 : 9.40625); (4.625 : 8.5881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/User/User_InventoryLog" />
+      <nodes>
+        <classShapeMoniker Id="954d0c09-75e0-45ba-91ca-c568c1d4eb7f" />
+        <classShapeMoniker Id="1e76e1c0-7fd6-4836-92c1-74866ecd11f7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.21875 : 9.125); (11.21875 : 4.77805826822917); (9.70833333333333 : 4.77805826822917 : JumpStart); (9.54166666666667 : 4.77805826822917 : JumpEnd); (9.17708083333333 : 4.77805826822917 : JumpStart); (9.01041416666667 : 4.77805826822917 : JumpEnd); (6.875 : 4.77805826822917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/User/User_Order" />
+      <nodes>
+        <classShapeMoniker Id="954d0c09-75e0-45ba-91ca-c568c1d4eb7f" />
+        <classShapeMoniker Id="3fae78ea-2ef9-40b2-ac64-06b0e5fb9f71" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.875 : 10.4431469726562); (9.75 : 10.4431469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/arnocoDataContext/Role/Role_User" />
+      <nodes>
+        <classShapeMoniker Id="50bd3550-bf2f-40df-bde0-d8ca9f903274" />
+        <classShapeMoniker Id="954d0c09-75e0-45ba-91ca-c568c1d4eb7f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

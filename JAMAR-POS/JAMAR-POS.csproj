@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net48</TargetFramework><UseWindowsForms>true</UseWindowsForms><LangVersion>latest</LangVersion><AssemblyName>JAMAR_POS</AssemblyName><RootNamespace>JAMAR_POS</RootNamespace></PropertyGroup><ItemGroup><Reference Include="System.Configuration" /><Reference Include="System.Data" /><Reference Include="System.Data.Linq" /><Reference Include="System.Data.DataSetExtensions" /><Reference Include="System.Xml.Linq" /></ItemGroup><ItemGroup>
+  <None Update="arnoco.dbml">
+    <Generator>MSLinqToSQLGenerator</Generator>
+    <LastGenOutput>arnoco.designer.cs</LastGenOutput>
+  </None>
+  <None Update="Properties\Settings.settings">
+    <Generator>SettingsSingleFileGenerator</Generator>
+    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+  </None>
+</ItemGroup><ItemGroup>
+  <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+</ItemGroup><ItemGroup>
+  <Compile Update="arnoco.designer.cs">
+    <DesignTime>True</DesignTime>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>arnoco.dbml</DependentUpon>
+  </Compile>
+  <Compile Update="Properties\Settings.Designer.cs">
+    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    <AutoGen>True</AutoGen>
+    <DependentUpon>Settings.settings</DependentUpon>
+  </Compile>
+</ItemGroup></Project>
